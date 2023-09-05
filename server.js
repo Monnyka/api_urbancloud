@@ -4,13 +4,10 @@ const tasks = require("./routes/task");
 const connectDB = require("./db/connect");
 require("dotenv").config();
 
-const port = 3000;
+const port = process.env.PORT;
+const connectString = process.env.CONNECTIONSTRING;
 
-//Connection String (will delete) test
-const connectString =
-  "mongodb+srv://nyka:1234@projectone.foglf.mongodb.net/?retryWrites=true&w=majority";
-
-//middleware ff
+//middleware
 app.use(express.json());
 
 //routes
@@ -19,12 +16,10 @@ app.use("/api/v1/tasks", tasks);
 const start = async () => {
   try {
     await connectDB(connectString); //will change connection string with process.env.MONGO_URI
-    app.listen(port, console.log("Server is listening on port 3000"));
+    app.listen(port, console.log("Server is listening on port " + port));
   } catch (error) {
     console.log(error);
   }
 };
 
 start();
-
-//Feature#1 Complete
