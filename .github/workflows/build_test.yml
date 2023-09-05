@@ -41,8 +41,6 @@ jobs:
         with:
           context: .
           platforms: linux/amd64,linux/arm64
-          username: ${{ secrets.DOCKER_USERNAME }}
-          password: ${{ secrets.DOCKER_PASSWORD }}
           push: true
           tags: nyka/api_nykadashboard:latest
 
