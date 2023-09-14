@@ -11,7 +11,7 @@ import { StatusBar } from "expo-status-bar";
 const DATA = [
   {
     id: "bd7acbea-c1b1-46c2-aed5-3ad53abb28ba",
-    title: "INSTALLING",
+    title: "INSTALLINGGG",
     des: "Install new driver deivce.. please wait and dont turn off your computer",
   },
   {
